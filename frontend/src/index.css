@@ -1,0 +1,382 @@
+/* --------------------------General--------------------------*/
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  grid-area: main;
+  background: linear-gradient(to right bottom, #fbdb89, #f48982);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+}
+
+#root {
+  height: 100%;
+}
+
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+h2 {
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff8000;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  margin-top: 1rem;
+}
+
+header a {
+  color: #ffffff;
+  padding: 1rem;
+}
+
+a.logo {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+
+header {
+  grid-area: header;
+  background-color: #581d36;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #581d36;
+  color: #ffffff;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row.center {
+  justify-content: center;
+}
+
+.row.top {
+  align-items: flex-start;
+}
+
+.col-1 {
+  flex: 1 1 25rem;
+}
+
+.col-2 {
+  flex: 2 1 50rem;
+}
+
+button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #a4a4a4 solid;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+
+button:hover {
+  border: 0.1rem #404040 solid;
+}
+button.primary {
+  background-color: #581d36;
+}
+
+button.block {
+  width: 100%;
+}
+
+button.small {
+  font-size: 1.2rem;
+}
+
+img {
+  border-radius: 0.5rem;
+}
+img.medium {
+  max-width: 29rem;
+  width: 100%;
+}
+
+.card {
+  border: 0.1rem #c0c0c0 solid;
+  background-color: #f8f8f8;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+.card-body {
+  padding: 1rem;
+}
+.card-body > * {
+  margin-bottom: 0.5rem;
+}
+.price {
+  font-size: 2rem;
+}
+.rating span {
+  color: #f0c040;
+  margin: 0.1rem;
+}
+.rating span:last-child {
+  color: #404040;
+}
+
+.success {
+  color: #20a020;
+}
+
+.danger {
+  color: #a02020;
+}
+
+.alert {
+  padding: 1rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
+}
+
+.alert-info {
+  color: #2020a0;
+  background-color: #e0e0ff;
+}
+
+.alert-danger {
+  color: #a02020;
+  background-color: #ffe0e0e0;
+}
+
+alert-success {
+  color: #20a020;
+  background-color: #eeffe0;
+}
+
+.badge {
+  background-color: #f02020;
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 0.2rem 0.7rem;
+  font-size: 1.4rem;
+  margin-left: 0.2rem;
+}
+
+img.small {
+  max-width: 5rem;
+  width: 100%;
+}
+
+.min-30 {
+  min-width: 30rem;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+.dropdown-content {
+  position: absolute;
+  display: none;
+  right: 0;
+  min-width: 12rem;
+  padding: 1rem;
+  z-index: 1;
+  background-color: #581d36;
+  margin: 0;
+  margin-top: 0.4rem;
+  border-radius: 0.5rem;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.loading {
+  display: block !important;
+}
+
+.checkout-steps > div {
+  border-top: 0.3rem #c0c0c0 solid;
+  color: #c0c0c0;
+  flex: 1;
+  padding: 1rem;
+  font-weight: bold;
+}
+.checkout-steps > div.active {
+  border-top-color: #f08000;
+  color: #f08000;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table tbody tr:nth-of-type(odd) {
+  background-color: #f4f4f4;
+}
+.table td,
+.table th {
+  text-align: left;
+  border: 0.1rem solid #e4e4e4;
+  padding: 0.5rem;
+}
+.table button {
+  margin: 0 0.2rem;
+}
+
+.blog-crv .item {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.block-sec .testim-box .slick-dots li button {
+  display: block;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider .social-icon a {
+  margin: 0 3px;
+}
+.navbar .navbar-nav .nav-link,
+.video .vid .vid-butn .icon,
+.video-wrapper .vid .vid-butn .icon {
+  cursor: pointer;
+}
+.block-sec .vid-area {
+  z-index: 99;
+}
+.div-tooltip-tit,
+.div-tooltip-sub {
+  display: block;
+  padding: 0;
+}
+section.testimonials {
+  overflow: hidden;
+}
+.contact-page .pages-header {
+  overflow: hidden;
+}
+div#ieatmaps iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+button.nb {
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+button.nb:hover {
+  background: #fff;
+  color: #222;
+}
+.replay {
+  cursor: pointer;
+}
+
+.pace-done #preloader:after {
+  bottom: 0;
+}
+#preloader {
+  top: 0;
+  left: 0;
+}
+
+.pace-done #preloader {
+  visibility: hidden;
+  -webkit-transition-delay: 1.5s;
+  -o-transition-delay: 1.5s;
+  transition-delay: 1.5s;
+}
+.pace-done #preloader:after,
+.pace-done #preloader:before {
+  height: 0;
+  -webkit-transition: all 0.7s cubic-bezier(1, 0, 0.55, 1);
+  -o-transition: all 0.7s cubic-bezier(1, 0, 0.55, 1);
+  transition: all 0.7s cubic-bezier(1, 0, 0.55, 1);
+  -webkit-transition-delay: 1s;
+  -o-transition-delay: 1s;
+  transition-delay: 1s;
+}
+body.hideX #preloader {
+  display: none !important;
+  z-index: -1111111;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+body.hideX .pace {
+  display: none !important;
+  background-color: transparent;
+}
+.app-footer .social a {
+  margin-right: 4px;
+}
+
+/* --------------------------Login--------------------------*/
+.login-form {
+  width: 100%;
+  height: 100%;
+}
+
+.login-form {
+  width: 400px;
+  margin: 100px auto;
+  padding: 36px 48px 48px 48px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.login-form > div {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.login-form label {
+  margin: 1rem 0;
+}
